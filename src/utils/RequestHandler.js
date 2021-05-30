@@ -1,9 +1,9 @@
 const MinecraftPinger = require('minecraft-pinger');
 
-function getData(adress, callback) {
-    MinecraftPinger.ping(adress, 25565, (error, result) => {
+function getData(address, callback) {
+    MinecraftPinger.ping(address, 25565, (error, result) => {
         if(error) {
-            console.log('An error occured whilst pinging ' + adress + ': ' + error);
+            console.log('An error occured whilst pinging ' + address + ': ' + error);
             return;
         }
         callback(result);

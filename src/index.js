@@ -9,7 +9,7 @@ const servers = new Map([
 function requestServers() {
     servers.forEach(function(value, key, map) {
         RequestHandler.getData(key, function(data) {
-            console.log(value + ' ' + key + ' online players: ' + data.players.online);
+            
         });
     })
 }
