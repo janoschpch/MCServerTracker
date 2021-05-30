@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/Magicccrafter/MCServerTracker/issues"
   },
-  "homepage": "https://github.com/Magicccrafter/MCServerTracker#readme"
+  "homepage": "https://github.com/Magicccrafter/MCServerTracker#readme",
+  "dependencies": {
+    "config": "^3.3.6",
+    "minecraft-pinger": "^1.0.5",
+    "minecraft-server-ping": "0.0.4"
+  }
 }
