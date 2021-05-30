@@ -35,7 +35,7 @@ function requestServers() {
 
     servers.forEach(function(value, key, map) {
         RequestHandler.getData(key, function(data) {
-            var sql = "INSERT INTO serverstats (date, date_only, time_only, address, type, version, protocolversion, playercount, maxplayercount, favicon, ping) VALUES ('" + date_only + " " + time + "', '" + date_only + "', '" + time + "', '" + key + "', '" + value + "', '" + data.version.name + "', " + data.version.protocol + ", " + data.players.online + ", " + data.players.max + ", '" + data.favicon + "', " + data.ping + ")";
+            var sql = "INSERT INTO serverstats (date, date_only, time_only, address, type, version, protocolversion, playercount, maxplayercount, favicon, ping) VALUES ('" + date_only + " " + time + "', '" + date_only + "', '" + time + "', '" + key + "', '" + value + "', '" + data.version.name + "', " + data.version.protocol + ", " + data.players.online + ", " + data.players.max + ", '" + "disabled" + "', " + data.ping + ")";
             console.log(date_only + ' | ' + time + ' | ' + 'Adding entry to db: ' + key + ' / ' + data.players.online + ' / ' + data.players.max + ' / ' + data.ping + 'ms');
             mysqlConnection.query(sql, function(err, result) {
                 if(err) {
