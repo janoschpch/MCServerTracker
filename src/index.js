@@ -46,52 +46,6 @@ function requestServers() {
     })
 }
 
-var task1 = schedule.scheduleJob('0 0 * * * *', function() {
+setInterval(() => {
     requestServers();
-});
-
-var task2 = schedule.scheduleJob('0 5 * * * *', function() {
-    requestServers();
-});
-
-var task3 = schedule.scheduleJob('0 10 * * * *', function() {
-    requestServers();
-});
-
-var task4 = schedule.scheduleJob('0 15 * * * *', function() {
-    requestServers();
-});
-
-var task5 = schedule.scheduleJob('0 20 * * * *', function() {
-    requestServers();
-});
-
-var task6 = schedule.scheduleJob('0 25 * * * *', function() {
-    requestServers();
-});
-
-
-var task7 = schedule.scheduleJob('0 30 * * * *', function() {
-    requestServers();
-});
-
-
-var task8 = schedule.scheduleJob('0 35 * * * *', function() {
-    requestServers();
-});
-
-var task9 = schedule.scheduleJob('0 40 * * * *', function() {
-    requestServers();
-});
-
-var task10 = schedule.scheduleJob('0 45 * * * *', function() {
-    requestServers();
-});
-
-var task11 = schedule.scheduleJob('0 50 * * * *', function() {
-    requestServers();
-});
-
-var task12 = schedule.scheduleJob('0 55 * * * *', function() {
-    requestServers();
-});
+}, 60000)
